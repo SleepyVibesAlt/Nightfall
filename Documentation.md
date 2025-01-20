@@ -17,7 +17,7 @@ This Documentation Is Last Updated for Prerelease Beta 6.1
 # Documentation For NightFall
 ## Booting The Library
 ```lua
-local NightFall = loadstring(game:HttpGet("", true))()
+local NightFall = loadstring(game:HttpGet("https://raw.githubusercontent.com/SleepyVibesAlt/Nightfall/refs/heads/main/source.lua", true))()
 ```
 > This loads up the library to use our Elements. No parameters required
 
