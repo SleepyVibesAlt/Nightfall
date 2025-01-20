@@ -1,4 +1,4 @@
-local Release = "Release 1.7
+local Release = "Prerelease Beta 6.1"
 
 local NightFall = { Folder = "NightFall", Options = {}, ThemeGradient = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(117, 164, 206)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(123, 201, 201)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(224, 138, 175))} }
 
@@ -2114,7 +2114,7 @@ function NightFall:CreateWindow(WindowSettings)
 		LogoID = "6031097225",
 		LoadingEnabled = true,
 		LoadingTitle = "NightFall Interface Suite",
-		LoadingSubtitle = "by Night Softworks",
+		LoadingSubtitle = "by Nebula Softworks",
 
 		ConfigSettings = {},
 
@@ -2291,7 +2291,7 @@ function NightFall:CreateWindow(WindowSettings)
 				end
 				if KeyFound then 
 					for _, instance in pairs(KeySystem:GetDescendants()) do
-						if instance.ClassName ~= "UICorner" and instance.ClassName ~= "UIPadding" then
+						if instance.ClassName ~= "UICorner" and instance.ClassName ~= "UIPadding" and instance.ClassName ~= "UIListLayout" then
 							if instance.ClassName ~= "UIStroke" then
 								tween(instance, {BackgroundTransparency = 1}, nil,TweenInfo.new(0.6, Enum.EasingStyle.Exponential))
 							end
@@ -2305,7 +2305,7 @@ function NightFall:CreateWindow(WindowSettings)
 								tween(instance, {Transparency = 1}, nil,TweenInfo.new(0.5, Enum.EasingStyle.Exponential))
 							end
 						end
-					end
+					end					
 					tween(KeySystem, {BackgroundTransparency = 1}, nil,TweenInfo.new(0.6, Enum.EasingStyle.Exponential))
 					task.wait(0.51)
 					Passthrough = true
@@ -2324,7 +2324,7 @@ function NightFall:CreateWindow(WindowSettings)
 					end
 					KeySystem.Input.InputBox.Text = "Incorrect Key"
 					AttemptsRemaining = AttemptsRemaining - 1
-					task.wait(0.4)
+					task.wait(1.3)
 					KeySystem.Input.InputBox.Text = ""
 				end
 			end)
@@ -2387,8 +2387,8 @@ function NightFall:CreateWindow(WindowSettings)
 
 		HomeTabSettings = Kwargify({
 			Icon = 1,
-			SupportedExecutors = {"Vega X", "Delta", "Nihon", "Xeno"}, -- THESE DEFAULTS ARE PLACEHOLDERS!! I DO NOT ADVERTISE THESE, THEY ARE JUS THE FIRST THAT CAME TO MIND. I HAVE NO IDEA WHETHER THEYA RE RATS (they prob are) AND IM NOT RESPONSIBLE IF U GET VIRUSES FROM INSTALLING AFTER SEEING THIS LIST
-			DiscordInvite = "noinvitelink" -- The disvord invite link. Do not include the link so for example if my invite was discord.gg/Night I would put Night
+			SupportedExecutors = {"Vega X", "Delta", "Nihon", "Xeno"},
+			DiscordInvite = "noinvitelink"
 		}, HomeTabSettings or {})
 
 		local HomeTab = {}
@@ -2443,8 +2443,6 @@ function NightFall:CreateWindow(WindowSettings)
 				HomeTabPage.detailsholder.dashboard.Client.Subtitle.Text = "Your Executor Isn't Officialy Supported By This Script."
 			end
 		end
-
-		-- Stolen From Sirius Stuff Begins Here
 
 		HomeTabPage.detailsholder.dashboard.Discord.Interact.MouseButton1Click:Connect(function()
 			setclipboard(tostring("https://discord.gg/"..HomeTabSettings.DiscordInvite)) -- Hunter if you see this I added copy also was too lazy to send u msg
@@ -2545,8 +2543,6 @@ function NightFall:CreateWindow(WindowSettings)
 				checkFriends()
 			end
 		end)()
-
-		-- Stolen From Sirius Stuff ends here
 
 	end
 
@@ -6610,17 +6606,17 @@ end
 
 if isStudio then
 	local Window = NightFall:CreateWindow({
-		Name = "Night Client - NightFall Hub | Blade Ball",
-		Subtitle = "by Night Softworks",
+		Name = "Nebula Client - NightFall Hub | Blade Ball",
+		Subtitle = "by Nebula Softworks",
 		LogoID = "123795201100198",
 		LoadingEnabled = true,
-		LoadingTitle = "Night Client (NightFall Hub)",
+		LoadingTitle = "Nebula Client (NightFall Hub)",
 		LoadingSubtitle = "Loading script for Blade Ball",
 		KeySystem = true,
 		KeySettings = {
-			Title = "Night Client | Key System",
+			Title = "Nebula Client | Key System",
 			Subtitle = "Blade Ball",
-			Note = "Please Enter Your Key To Use Night Client",
+			Note = "Please Enter Your Key To Use Nebula Client",
 			FileName = "Key", -- the name of the key file. this will be saved in ur RootFolder. However, if you don't have one, it'll save in ur config folder instead
 			SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
 			Key = {"Example Key"}, -- List of keys that will be accepted by the system, please use a system like Pelican or Luarmor that provide key strings based on your HWID since putting a simple string is very easy to bypass
@@ -6632,242 +6628,6 @@ if isStudio then
 		}
 	})
 	
-	--[[local Window = NightFall:CreateWindow({
-		Name = "NightFall Example Window",
-		Subtitle = "Test",
-		LogoID = "6031097225",
-		LoadingEnabled = true,
-		LoadingTitle = "NightFall Interface Suite",
-		LoadingSubtitle = "by Night Softworks",
-		KeySystem = true,
-		KeySettings = {
-			Title = "NightFall Example Key",
-			Subtitle = "Key System",
-			Note = "Please Enter Your Key To Use Example Hub",
-			FileName = "Key", -- the name of the key file. this will be saved in ur RootFolder. However, if you don't have one, it'll save in ur config folder instead
-			SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-			Key = {"Example Key"} -- List of keys that will be accepted by the system, please use a system like Pelican or Luarmor that provide key strings based on your HWID since putting a simple string is very easy to bypass
-		}
-	})
-
-	NightFall:Notification({ 
-		Title = "Welcome to NightFall",
-		Icon = "sparkle",
-		ImageSource = "Material",
-		Content = "Welcome to the NightFall Interface Suite. This Is an Amazing Quality Freemium UI Library For Roblox Exploiting Made By Night Softworks. NightFall was Created in hopes of improving the standard of UI Library designs by being the golden standard for it. NightFall Has Amazing Features like a key system, notification and perfection in aesthetics and design. So, What Are You Waiting For? Start Using NightFall Today at " .. website
-	})
-
-	local Tabs = {
-		Main = Window:CreateTab({
-			Name = "Tab Example 1",
-			Icon = "view_in_ar",
-			ImageSource = "Material",
-			ShowTitle = true
-		}),
-		Main2 = Window:CreateTab({
-			Name = "Tab Example 2",
-			Icon = "location_searching",
-			ImageSource = "Material",
-			ShowTitle = false
-		}),
-		Premium = Window:CreateTab({
-			Name = "Premium Tab",
-			Icon = "sparkle",
-			ImageSource = "Material",
-			ShowTitle = true
-		}),
-		Debug = Window:CreateTab({
-			Name = "Debug",
-			Icon = "settings"
-		})
-	}
-
-
-	Window:CreateHomeTab()
-	local bleh =Tabs.Debug:CreateColorPicker()
-	Tabs.Debug:CreateButton({
-		Callback = function()
-			bleh:Set({
-				Color = Color3.fromRGB(0,0,0)
-			})
-		end,
-	})
-
-	Tabs.Main:CreateSection("Section Example")
-	Tabs.Main:CreateButton({
-		Name = "Button Example!",
-		Description = "Every Element Except For Sliders Can Have a description like this"
-	})
-	Tabs.Main:CreateLabel({
-		Text = "Label Example",
-		Style = 1
-	})
-	Tabs.Main:CreateLabel({
-		Text = "Information Example",
-		Style = 2
-	})
-	Tabs.Main:CreateLabel({
-		Text = "Warning Example",
-		Style = 3
-	})
-	Tabs.Main:CreateParagraph({
-		Title = "Paragraph Example ",
-		Text = "This Is A Paragraph. You Can Type Very Long Strings Here And They'll Automatically Fit! This Counts As A Description Right? Right? Right? Right? Right? Right? Right? Right? Right? Right? Right? Right? Right? Right? Right? Also Did I Mention This Has Rich Text? Also Did I Mention This Has Rich Text? Also Did I Mention This Has Rich Text? Also Did I Mention This Has Rich Text? Also Did I Mention This Has Rich Text? Also Did I Mention This Has Rich Text?"
-	})
-	Tabs.Main:CreateSlider({
-		Name = "Slider Example",
-		Range = {0, 200},
-		Increment = 0.1,
-		CurrentValue = 100,
-		Flag = "Slider",
-	})
-	Tabs.Main:CreateToggle({
-		Name = "Toggle Example",
-		Description = "This Is A Toggle. See I Was Right? Sliders Don't Have Descriptions!",
-		CurrentValue = false,
-	})
-
-	Tabs.Main:CreateBind({
-		Name = "Bind Example",
-		Description = "Btw Using CreateKeybind is deprecated, use CreateBind For Future Binds :)",
-		CurrentKeybind = "Q",
-		HoldToInteract = false,
-	})
-	Tabs.Main:CreateInput({
-		Name = "Dynamic Input Example",
-		Description = "Every Element has :Set(). Sadly this one is broken;the text wont update :(",
-		PlaceholderText = "Input Placeholder",
-		CurrentValue = "",
-		Numeric = false,
-		MaxCharacters = nil,
-		Enter = false
-	})
-	Tabs.Main:CreateDropdown({
-		Name = "Dropdown Example",
-		Description = "U can access a element's values using .Settings!",
-		Options = {"Option 1","Option 2","Option 3","Option 4","Option 5","Option 6"},
-		CurrentOption = "Option 1",
-		MultipleOptions = false,
-		SpecialType = nil
-	})
-
-	Tabs.Main:CreateColorPicker({
-		Name = "Color Picker Example",
-		Color = Color3.fromRGB(86, 171, 128),
-		Flag = "ColorPicker1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-		Callback = function(Value)
-			-- The function that takes place every time the color picker is moved/changed
-			-- The variable (Value) is a Color3fromRGB value based on which color is selected
-		end
-	})
-
-	Tabs.Main2:CreateSection("The Elements Here Are To Show Unique Features")
-	Tabs.Main2:CreateToggle({
-		Name = "Toggle - Default On",
-		Description = "Toggles Can be Onned By Default!",
-		CurrentValue = true
-	})
-	Tabs.Main2:CreateBind({
-		Name = "Hold To Interact - Walkspeed Example",
-		Description = "Binds Can Be Made to only Callback when held",
-		HoldToInteract = true,
-		CurrentBind = "E",
-		Callback = function(v)
-			if v then 
-				Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
-			else
-				Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-			end
-		end,
-	})
-	Tabs.Main2:CreateInput({
-		Name = "Numeric And 12 Max Characters",
-		Description = "You Can Limit The Max Characters or Allow Only Numbers",
-		Numeric = true,
-		MaxCharacters = 12
-	})
-	Tabs.Main2:CreateInput({
-		Name = "Require Enter",
-		Description = "You Can Only make the callback happen after user hits enter",
-		Enter = true
-	})
-	Tabs.Main2:CreateLabel({
-		Text = "Every Element Can be Destroyed as well!"
-	})
-	Tabs.Main2:CreateDropdown({
-		Name = "Dropdown - Multi Options",
-		Description = "Multiple Special Features can be used on the same element!",
-		Options = {"Option 1","Option 2","Option 3","Option 4","Option 5","Option 6"},
-		CurrentOption = {"Option 1","Option 3","Option 6"},
-		MultipleOptions = true
-	})
-	Tabs.Main2:CreateDropdown({
-		Name = "Dropdown - Players",
-		Description = "NightFall's Dropdowns Has a built in Player Dropdown!",
-		Options = {"u can put anything here, it wont be shown anyway"},
-		CurrentOption = {"same here, itll be the first option"},
-		MultipleOptions = false,
-		SpecialType = "Player"
-	})
-
-	local s = Tabs.Premium:CreateSection("You can add elements inside section too")
-	s:CreateButton()
-	s:CreateLabel()
-	s:CreateDivider()
-	s:CreateDropdown()
-
-	Tabs.Premium:BuildConfigSection()
-	Tabs.Premium:BuildThemeSection()]]
 end
-
--- THIS IS THE DEBUG DEMO, ONLY USED WHEN TESTING NEW ELEMENTS AND CODE
---[[if isStudio then
-    window = NightFall:CreateWindow({LoadingEnabled = false})
-    t1 = window:CreateTab()
-    t2 = window:CreateTab({ Name = "Tab 2", Icon = "location_searching"})
-    NightFall:Notification({ 
-        Title = "Welcome to NightFall",
-        Icon = "sparkle",
-        ImageSource = "Material",
-        Content = "Welcome to the NightFall Interface Suite. This Is an Amazing Quality Freemium UI Library For Roblox Exploiting Made By Night Softworks. NightFall was Created in hopes of improving the standard of UI Library designs by being the golden standard for it. NightFall Has Amazing Features like a key system, notification and perfection in aesthetics and design. So, What Are You Waiting For? Start Using NightFall Today at " .. website
-    })
-    t1:CreateSection()
-    local btn = t1:CreateButton({Callback = "", Description = "This Is A Description"})
-    local l = t1:CreateLabel({ Style = 2})
-    local l2 = t1:CreateLabel({ Text = "Another Label" })
-    t2:CreateButton({ Callback = function() 
-        l:Destroy()
-        l2:Set("New Text")
-    end})
-    t2:CreateLabel({Style = 3})
-    t1:CreateParagraph({Text = "Single String"})
-    t1:CreateParagraph({Text = "Welcome to the NightFall Interface Suite. This Is an Amazing Quality Freemium UI Library For Roblox Exploiting Made By Night Softworks. NightFall was Created in hopes of improving the standard of UI Library designs by being the golden standard for it. NightFall Has Amazing Features like a key system, notification and perfection in aesthetics and design. So, What Are You Waiting For? Start Using NightFall Today at " .. website})
-    s = t2:CreateSlider({ Callback = function(v) print(v) end })	
-    t1:CreateButton({ Callback = function()
-        s:Set({Name = "new name", Callback = ""})
-        wait(5)
-        s:Destroy()
-    end})
-    t1:CreateColorPicker()
-    local toggle = t1:CreateToggle({Name = "test", Description = "test", CurrentValue = true, Callback = ""}, "toggle2")
-    t1:CreateToggle({Callback = function(Value) toggle:Destroy() print(Value) end})
-    local bind = t2:CreateBind({Name = "test", Description = "test", CurrentBind = "E", HoldToInteract = false, Callback = ""})
-    t2:CreateKeybind({HoldToInteract = true, Callback = function(v)
-        if v then
-            Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
-        else
-            Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-        end
-    end,})
-    local input = t2:CreateInput({Name = "test",ClearTextAfterFocusLost = false, Description = "Numbers only, 8 max characters and enter required.",MaxCharacters = 8 ,Numeric = true, Enter = true, Callback = ""})
-    t2:CreateInput({Callback = function(text) print(text) end})
-    local d = t1:CreateDropdown({Name = "test", Options = {"Apples", "Bananas", "Strawberries", "Elixir"}, Description = "MultiOptions", MultipleOptions = true, Callback = function(t) print(t) end, CurrentOption = {"Apples", "Elixir"}})
-    t1:CreateDropdown({Callback = function(t) print(unpack(t)) end})
-    t1:CreateDropdown({Description = "Special Type - Player", Callback = "", SpecialType = "Player"})
-end]]--
-
-task.delay(4, function() 
-	NightFall:LoadAutoloadConfig()
-end)
 
 return NightFall
