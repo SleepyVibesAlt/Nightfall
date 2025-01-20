@@ -1,4 +1,4 @@
-local Release = "Prerelease Beta 6.1"
+local Release = "Release 1.7
 
 local NightFall = { Folder = "NightFall", Options = {}, ThemeGradient = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(117, 164, 206)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(123, 201, 201)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(224, 138, 175))} }
 
@@ -2114,7 +2114,7 @@ function NightFall:CreateWindow(WindowSettings)
 		LogoID = "6031097225",
 		LoadingEnabled = true,
 		LoadingTitle = "NightFall Interface Suite",
-		LoadingSubtitle = "by Nebula Softworks",
+		LoadingSubtitle = "by Night Softworks",
 
 		ConfigSettings = {},
 
@@ -2388,7 +2388,7 @@ function NightFall:CreateWindow(WindowSettings)
 		HomeTabSettings = Kwargify({
 			Icon = 1,
 			SupportedExecutors = {"Vega X", "Delta", "Nihon", "Xeno"}, -- THESE DEFAULTS ARE PLACEHOLDERS!! I DO NOT ADVERTISE THESE, THEY ARE JUS THE FIRST THAT CAME TO MIND. I HAVE NO IDEA WHETHER THEYA RE RATS (they prob are) AND IM NOT RESPONSIBLE IF U GET VIRUSES FROM INSTALLING AFTER SEEING THIS LIST
-			DiscordInvite = "noinvitelink" -- The disvord invite link. Do not include the link so for example if my invite was discord.gg/nebula I would put nebula
+			DiscordInvite = "noinvitelink" -- The disvord invite link. Do not include the link so for example if my invite was discord.gg/Night I would put Night
 		}, HomeTabSettings or {})
 
 		local HomeTab = {}
@@ -6610,17 +6610,17 @@ end
 
 if isStudio then
 	local Window = NightFall:CreateWindow({
-		Name = "Nebula Client - NightFall Hub | Blade Ball",
-		Subtitle = "by Nebula Softworks",
+		Name = "Night Client - NightFall Hub | Blade Ball",
+		Subtitle = "by Night Softworks",
 		LogoID = "123795201100198",
 		LoadingEnabled = true,
-		LoadingTitle = "Nebula Client (NightFall Hub)",
+		LoadingTitle = "Night Client (NightFall Hub)",
 		LoadingSubtitle = "Loading script for Blade Ball",
 		KeySystem = true,
 		KeySettings = {
-			Title = "Nebula Client | Key System",
+			Title = "Night Client | Key System",
 			Subtitle = "Blade Ball",
-			Note = "Please Enter Your Key To Use Nebula Client",
+			Note = "Please Enter Your Key To Use Night Client",
 			FileName = "Key", -- the name of the key file. this will be saved in ur RootFolder. However, if you don't have one, it'll save in ur config folder instead
 			SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
 			Key = {"Example Key"}, -- List of keys that will be accepted by the system, please use a system like Pelican or Luarmor that provide key strings based on your HWID since putting a simple string is very easy to bypass
@@ -6638,7 +6638,7 @@ if isStudio then
 		LogoID = "6031097225",
 		LoadingEnabled = true,
 		LoadingTitle = "NightFall Interface Suite",
-		LoadingSubtitle = "by Nebula Softworks",
+		LoadingSubtitle = "by Night Softworks",
 		KeySystem = true,
 		KeySettings = {
 			Title = "NightFall Example Key",
@@ -6654,7 +6654,7 @@ if isStudio then
 		Title = "Welcome to NightFall",
 		Icon = "sparkle",
 		ImageSource = "Material",
-		Content = "Welcome to the NightFall Interface Suite. This Is an Amazing Quality Freemium UI Library For Roblox Exploiting Made By Nebula Softworks. NightFall was Created in hopes of improving the standard of UI Library designs by being the golden standard for it. NightFall Has Amazing Features like a key system, notification and perfection in aesthetics and design. So, What Are You Waiting For? Start Using NightFall Today at " .. website
+		Content = "Welcome to the NightFall Interface Suite. This Is an Amazing Quality Freemium UI Library For Roblox Exploiting Made By Night Softworks. NightFall was Created in hopes of improving the standard of UI Library designs by being the golden standard for it. NightFall Has Amazing Features like a key system, notification and perfection in aesthetics and design. So, What Are You Waiting For? Start Using NightFall Today at " .. website
 	})
 
 	local Tabs = {
@@ -6829,7 +6829,7 @@ end
         Title = "Welcome to NightFall",
         Icon = "sparkle",
         ImageSource = "Material",
-        Content = "Welcome to the NightFall Interface Suite. This Is an Amazing Quality Freemium UI Library For Roblox Exploiting Made By Nebula Softworks. NightFall was Created in hopes of improving the standard of UI Library designs by being the golden standard for it. NightFall Has Amazing Features like a key system, notification and perfection in aesthetics and design. So, What Are You Waiting For? Start Using NightFall Today at " .. website
+        Content = "Welcome to the NightFall Interface Suite. This Is an Amazing Quality Freemium UI Library For Roblox Exploiting Made By Night Softworks. NightFall was Created in hopes of improving the standard of UI Library designs by being the golden standard for it. NightFall Has Amazing Features like a key system, notification and perfection in aesthetics and design. So, What Are You Waiting For? Start Using NightFall Today at " .. website
     })
     t1:CreateSection()
     local btn = t1:CreateButton({Callback = "", Description = "This Is A Description"})
@@ -6841,7 +6841,7 @@ end
     end})
     t2:CreateLabel({Style = 3})
     t1:CreateParagraph({Text = "Single String"})
-    t1:CreateParagraph({Text = "Welcome to the NightFall Interface Suite. This Is an Amazing Quality Freemium UI Library For Roblox Exploiting Made By Nebula Softworks. NightFall was Created in hopes of improving the standard of UI Library designs by being the golden standard for it. NightFall Has Amazing Features like a key system, notification and perfection in aesthetics and design. So, What Are You Waiting For? Start Using NightFall Today at " .. website})
+    t1:CreateParagraph({Text = "Welcome to the NightFall Interface Suite. This Is an Amazing Quality Freemium UI Library For Roblox Exploiting Made By Night Softworks. NightFall was Created in hopes of improving the standard of UI Library designs by being the golden standard for it. NightFall Has Amazing Features like a key system, notification and perfection in aesthetics and design. So, What Are You Waiting For? Start Using NightFall Today at " .. website})
     s = t2:CreateSlider({ Callback = function(v) print(v) end })	
     t1:CreateButton({ Callback = function()
         s:Set({Name = "new name", Callback = ""})

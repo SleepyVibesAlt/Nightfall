@@ -369,24 +369,3 @@ Create the config section that uses our Flag System Technology to save your conf
 ```lua
 Tab:BuildConfigSection() -- Tab Should be the name of the tab you are adding this section to.
 ```
-
-### Credits
-
-Main Developers:  
- `hunter` - Lead/Main Developer, UI Designing, Some Programming, Documentation, and Logo  
- `JustHey` - Co Developer, Major Bug Fixing, Configuration Scripting  
- `Throit` - Color Picker  
- Wally - Dragging And Certain Other Mechanics  
- `shlexr and iRay` -  Rayfield (PCall Parsing, Notifications, Slider)  
-  
-Helpers/Side Developers:  
- `Tarmac and qweery` - Icon Modules  
- kirill9655 - Loading Circle and Certain Images  
- Sirius Discord Members - Feedback, Suggestions And Testers  
- Inori - Configuration Concept
-
-> [!NOTE]
-> If Your Name Is in a `box like this`, it means you contributed a lot.
-
-### Script Template/Example
-COMING SOON
