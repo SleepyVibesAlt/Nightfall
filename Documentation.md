@@ -1,6 +1,6 @@
 # Introduction
 This Documentation Is Last Updated for Prerelease Beta 6.1
-## Why Choose NIGHTFALL?
+## Why Choose NightFall?
   Reliable And Stable  
   Beautful Design  
   Open Sourced  
@@ -14,40 +14,40 @@ This Documentation Is Last Updated for Prerelease Beta 6.1
 ***You may use the github MD Sidebar to navigate through the documentation***
 
 
-# Documentation For NIGHTFALL
+# Documentation For NightFall
 ## Booting The Library
 ```lua
-local NIGHTFALL = loadstring(game:HttpGet("", true))()
+local NightFall = loadstring(game:HttpGet("", true))()
 ```
 > This loads up the library to use our Elements. No parameters required
 
 > [!NOTE]
-> NIGHTFALL Gives The User The Option To Load, Save And Autoload Their Own Configurations So manually loading them isnt required
+> NightFall Gives The User The Option To Load, Save And Autoload Their Own Configurations So manually loading them isnt required
 
 ## Windows
 #### Creating The Window
-Sadly, Unlike Older Projects, NIGHTFALL Can't Have Multiple Windows. But It's Fine! Right?  
+Sadly, Unlike Older Projects, NightFall Can't Have Multiple Windows. But It's Fine! Right?  
 
 > [!IMPORTANT]
-> NIGHTFALL's Glassmorphism Requires Graphics Level 8 Or Above
+> NightFall's Glassmorphism Requires Graphics Level 8 Or Above
 
 ```lua
-local Window = NIGHTFALL:CreateWindow({
-	Name = "NIGHTFALL Example Window", -- This Is Title Of Your Window
+local Window = NightFall:CreateWindow({
+	Name = "NightFall Example Window", -- This Is Title Of Your Window
 	Subtitle = nil, -- A Gray Subtitle next To the main title.
-	LogoID = "82795327169782", -- The Asset ID of your logo. Set to nil if you do not have a logo for NIGHTFALL to use.
+	LogoID = "82795327169782", -- The Asset ID of your logo. Set to nil if you do not have a logo for NightFall to use.
 	LoadingEnabled = true, -- Whether to enable the loading animation. Set to false if you do not want the loading screen or have your own custom one.
-	LoadingTitle = "NIGHTFALL Interface Suite", -- Header for loading screen
+	LoadingTitle = "NightFall Interface Suite", -- Header for loading screen
 	LoadingSubtitle = "by Nebula Softworks", -- Subtitle for loading screen
 
 	ConfigSettings = {
 		RootFolder = nil, -- The Root Folder Is Only If You Have A Hub With Multiple Game Scripts and u may remove it. DO NOT ADD A SLASH
-		ConfigFolder = "Big Hub" -- The Name Of The Folder Where NIGHTFALL Will Store Configs For This Script. DO NOT ADD A SLASH
+		ConfigFolder = "Big Hub" -- The Name Of The Folder Where NightFall Will Store Configs For This Script. DO NOT ADD A SLASH
 	},
 
-	KeySystem = false, -- As Of Beta 6, NIGHTFALL Has officially Implemented A Key System!
+	KeySystem = false, -- As Of Beta 6, NightFall Has officially Implemented A Key System!
 	KeySettings = {
-		Title = "NIGHTFALL Example Key",
+		Title = "NightFall Example Key",
 		Subtitle = "Key System",
 		Note = "Best Key System Ever! Also, Please Use A HWID Keysystem like Pelican, Luarmor etc. that provide key strings based on your HWID since putting a simple string is very easy to bypass",
 		SaveInRoot = false, -- Enabling will save the key in your RootFolder (YOU MUST HAVE ONE BEFORE ENABLING THIS OPTION)
@@ -62,8 +62,8 @@ local Window = NIGHTFALL:CreateWindow({
 })
 ```
 
-#### NIGHTFALL Icons
-NIGHTFALL Uses Custom Icons so u do not have to find ans upload your own!
+#### NightFall Icons
+NightFall Uses Custom Icons so u do not have to find ans upload your own!
 We have 2 sources ; [Lucide](https://github.com/latte-soft/lucide-roblox/blob/master/md/icon-index.md) and [Material](https://fonts.google.com/icons?icon.query=home&icon.set=Material+Icons&icon.style=Sharp).  
 Simply grab the name of your icon and paste it into the icon parameter. If you're using Lucide, replace spaces with dashes (-) and if you're on Material, replace spaces with underscores (_)  
 Make sure to change ImageSource to the source you're using.
@@ -103,9 +103,9 @@ Tab:CreateDivider()
 #### Destroying The Interface
 Destroys the UI And Elements
 > [!WARNING]
-> Destroying NIGHTFALL Does Not Toggle Off Your Scripts So When Destroying, make sure you disable them first
+> Destroying NightFall Does Not Toggle Off Your Scripts So When Destroying, make sure you disable them first
 ```
-NIGHTFALL:Destroy()
+NightFall:Destroy()
 ```
 
 ## Interactions
@@ -113,11 +113,11 @@ NIGHTFALL:Destroy()
 ### Adding Interactive Elements
 #### Notifying The User (Notifications)
 ```lua
-NIGHTFALL:Notification({ 
-	Title = "NIGHTFALL Notification Example",
+NightFall:Notification({ 
+	Title = "NightFall Notification Example",
 	Icon = "notifications_active",
 	ImageSource = "Material",
-	Content = "This Is A Preview Of NIGHTFALL's Dynamic Notification System Entailing Estimated/Calculated Wait Times, A Sleek Design, Icons, And A Glassmorphic Look"
+	Content = "This Is A Preview Of NightFall's Dynamic Notification System Entailing Estimated/Calculated Wait Times, A Sleek Design, Icons, And A Glassmorphic Look"
 })
 ```
 
@@ -260,10 +260,10 @@ local Bind = Tab:CreateBind({
 }, "Bind") -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
 ```  
 
-#### Changing The Window Keybind Using NIGHTFALL's Binded Keys
+#### Changing The Window Keybind Using NightFall's Binded Keys
 ```lua
 local Bind = Tab:CreateBind({
-	Name = "NIGHTFALL Interface Bind",
+	Name = "NightFall Interface Bind",
 	Description = nil,
 	CurrentBind = "K", -- Check Roblox Studio Docs For KeyCode Names
 	HoldToInteract = false, -- When true, Instead of toggling, You hold to achieve the active state of the Bind
@@ -295,20 +295,20 @@ ElementName:Destroy()
 ```
 
 ## Check the value of an existing element
-To check the current value of an existing element, using the variable, you can do ElementName.CurrentValue, if it's a dropdown or colorpicker, you will need to use DropdownName.CurrentOption or ColorpickerName.CurrentColor You can also check it via the flags from NIGHTFALL.Options
+To check the current value of an existing element, using the variable, you can do ElementName.CurrentValue, if it's a dropdown or colorpicker, you will need to use DropdownName.CurrentOption or ColorpickerName.CurrentColor You can also check it via the flags from NightFall.Options
 
 ## UI Components
 
 ### Textual Elements
 
 > [!NOTE]
-> NIGHTFALL Paragraphs Automatically Size To Your text!
+> NightFall Paragraphs Automatically Size To Your text!
 
 #### Creating A Label
 ```lua
 local Label = Tab:CreateLabel({
 	Text = "Label Example",
-	Style = 1 -- NIGHTFALL Labels Have 3 Styles : A Basic Label, A Green Information Label and A Red Warning Label. Look At The Following Image For More Details
+	Style = 1 -- NightFall Labels Have 3 Styles : A Basic Label, A Green Information Label and A Red Warning Label. Look At The Following Image For More Details
 })
 ```
 > [!TIP]
@@ -345,7 +345,7 @@ ElementName:Destroy()
 ## Finishing Your Script and Extras  
 
 ### Adding A Home Tab.
-As Of Beta 4, NIGHTFALL has implemented a Premade Home tab with a information dashboard similar to Sirius and Eclipse Hub.
+As Of Beta 4, NightFall has implemented a Premade Home tab with a information dashboard similar to Sirius and Eclipse Hub.
 ```lua
 Window:CreateHomeTab({
 	SupportedExecutors = {}, -- A Table Of Executors Your Script Supports. Add strings of the executor names for each executor.
@@ -357,7 +357,7 @@ Window:CreateHomeTab({
 ### Finishing Your Script
 
 #### Setting Up Theming
-As Of Beta 4, NIGHTFALL has implemented theming. Users may change the accent of the Interface using Color Pickers or Using Preset Colors handpicked by Nebula Softworks
+As Of Beta 4, NightFall has implemented theming. Users may change the accent of the Interface using Color Pickers or Using Preset Colors handpicked by Nebula Softworks
 ```lua
 Tab:BuildThemeSection() -- Tab Should be the name of the tab you are adding this section to.
 ```
